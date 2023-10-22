@@ -15,6 +15,7 @@ import {NewPostComponent} from "./page/new-post/new-post.component";
 import {AngularEditorModule} from "@kolkov/angular-editor";
 import {HttpClientModule} from "@angular/common/http";
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
+import {AngularFireStorageModule} from "@angular/fire/compat/storage";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDm72R-TE68Do2agAyZ2dicQEByA7T-WzA",
@@ -37,12 +38,13 @@ const firebaseConfig = {
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(firebaseConfig),
     provideFirestore(() => getFirestore()),
+    AngularFireStorageModule,
     FormsModule,
     AngularEditorModule,
-    HttpClientModule,
     FontAwesomeModule,
     ReactiveFormsModule
   ],
