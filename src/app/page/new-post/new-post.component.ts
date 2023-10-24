@@ -126,7 +126,7 @@ export class NewPostComponent implements OnInit{
       // console.log(value);
       this.docId = value;
       let Id = this.docId.id;
-      console.log(Id)
+      // console.log(Id)
 
       if (Id){
         this.postService.loadOneData(value).subscribe(post =>{

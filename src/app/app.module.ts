@@ -16,6 +16,8 @@ import {AngularEditorModule} from "@kolkov/angular-editor";
 import {HttpClientModule} from "@angular/common/http";
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import {AngularFireStorageModule} from "@angular/fire/compat/storage";
+import {LoginComponent} from "./auth/login/login.component";
+import {AngularFireAuthModule} from "@angular/fire/compat/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDm72R-TE68Do2agAyZ2dicQEByA7T-WzA",
@@ -28,6 +30,7 @@ const firebaseConfig = {
 
 @NgModule({
   declarations: [
+    LoginComponent,
     AppComponent,
     HeaderComponent,
     FooterComponent,
@@ -46,7 +49,8 @@ const firebaseConfig = {
     FormsModule,
     AngularEditorModule,
     FontAwesomeModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -82,4 +82,10 @@ export class PostsService{
     });
   }
 
+  markFeatured(id:any, featureData: any){
+    this.angularFireStore.doc(`posts/${id}`).update(featureData).then(()=>{
+      console.log("Feature Status Update");
+    })
+  }
+
 }
