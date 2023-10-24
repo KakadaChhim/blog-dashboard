@@ -3,13 +3,12 @@ import {CategoriesService} from "../category/categories.service";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Post} from "./post";
 import {PostsService} from "./posts.service";
-import {ActivatedRoute, Router} from "@angular/router";
-import * as diagnostics_channel from "diagnostics_channel";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-new-post',
   template: `
-    <div class="w-full">
+    <div class="w-full mt-[80px]">
       <div class="text-center py-5">
         <h2 style="font-size: 20px">{{formStatus}} Post</h2>
         <p>You can {{formStatus}} post here!</p>

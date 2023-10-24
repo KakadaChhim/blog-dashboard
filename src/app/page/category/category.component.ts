@@ -5,7 +5,7 @@ import {Category} from "./category";
 @Component({
   selector: 'app-category',
   template: `
-    <div class="w-full">
+    <div class="w-full mt-[80px]">
         <div class="flex justify-center">
             <div class="min-w-[300px] w-[70%] bg-secondary p-5">
                 <div class="text-center pb-3">
@@ -88,7 +88,7 @@ export class CategoryComponent implements OnInit{
     ngOnInit(): void {
       this.categoriesService.loadData().subscribe( value => {
           this.categoryArray = value;
-          console.log(this.categoryArray)
+          // console.log(this.categoryArray)
       });
     }
   onSubmit(formData: any){

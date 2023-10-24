@@ -20,7 +20,7 @@ export class AuthService{
     this.AngularFireAuth.signInWithEmailAndPassword(email, password).then(() => {
       this.isLogin.next(true);
       this.isLoggedInGuard = true;
-      console.log("Login Successfully");
+      // console.log("Login Successfully");
       this.loadUser();
       this.router.navigate(['/']);
     }).catch(e => {
@@ -40,7 +40,7 @@ export class AuthService{
       localStorage.removeItem('user');
       this.isLogin.next(false);
       this.isLoggedInGuard = false;
-      console.log("logout success");
+      // console.log("logout success");
       this.router.navigate(['/login']);
     })
   }

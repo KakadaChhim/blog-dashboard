@@ -4,7 +4,7 @@ import {PostsService} from "../new-post/posts.service";
 @Component({
   selector: 'app-all-post',
   template: `
-    <div class="w-full">
+    <div class="w-full mt-[80px]">
       <div class="flex justify-center">
         <div class="min-w-[300px] w-[80%] bg-secondary p-5">
           <div class="text-center mb-2">
@@ -102,14 +102,14 @@ export class AllPostComponent implements OnInit{
   }
     ngOnInit(): void {
         this.postService.loadData().subscribe( value => {
-          console.log(value);
+          // console.log(value);
           this.postArray = value;
         })
     }
 
     onDelete(postImagePath: any, id: any){
-      console.log(postImagePath)
-      console.log(id)
+      // console.log(postImagePath)
+      // console.log(id)
       this.postService.deleteImage(postImagePath, id);
     }
 

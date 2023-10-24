@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import {AngularFireModule} from "@angular/fire/compat";
 import {HeaderComponent} from "./components/header/header.component";
-import {FooterComponent} from "./components/footer/footer.component";
 import {PageComponent} from "./page/page.component";
 import {CategoryComponent} from "./page/category/category.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
@@ -33,7 +32,6 @@ const firebaseConfig = {
     LoginComponent,
     AppComponent,
     HeaderComponent,
-    FooterComponent,
     PageComponent,
     CategoryComponent,
     AllPostComponent,

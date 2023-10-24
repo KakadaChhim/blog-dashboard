@@ -4,7 +4,7 @@ import {AuthService} from "../auth.service";
 @Component({
   selector: 'app-login',
   template: `
-    <div class="w-full">
+    <div class="w-full middle">
       <div class="flex justify-center">
         <div class="min-w-[300px] w-[400px] bg-secondary p-5">
           <div class="text-center pb-3">
@@ -56,7 +56,17 @@ import {AuthService} from "../auth.service";
         </div>
       </div>
     </div>
-  `
+  `,
+  styles: [
+    `
+      .middle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+    `
+  ]
 })
 
 export class LoginComponent{
